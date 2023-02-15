@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -24,6 +25,8 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        supportActionBar?.hide()
 
         mAuth= FirebaseAuth.getInstance()
         edtEmail = findViewById(R.id.edt_email)
@@ -55,5 +58,18 @@ class Login : AppCompatActivity() {
     // functions
     private fun login(email : String , password : String ){
         // logic for logging user
+
+        mAuth.signInWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // code for logging a user
+                    val intent=Intent(this,MainActivity::class.java)
+                    startActivity(intent)
+
+                } else {
+                    Toast.makeText(this,"User Does not Exist",Toast.LENGTH_SHORT).show()
+                }
+            }
+
     }
 }
