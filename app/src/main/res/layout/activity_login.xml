@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainbackground"
     tools:context=".Login">
 
     <ImageView
@@ -33,7 +34,8 @@
         android:layout_below="@id/edt_email"
         android:layout_marginTop="10dp"
         android:hint="Password"
-        
+
+
         android:paddingLeft="13dp"
         android:background="@drawable/edt_background"
         android:layout_marginRight="20dp"
