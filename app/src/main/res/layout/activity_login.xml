@@ -13,6 +13,7 @@
         android:layout_height="150dp"
         android:src="@drawable/chitchatlogo"
         android:layout_centerHorizontal="true"
+
         android:layout_marginTop="70dp"/>
     <EditText
         android:id="@+id/edt_email"
@@ -32,6 +33,7 @@
         android:layout_below="@id/edt_email"
         android:layout_marginTop="10dp"
         android:hint="Password"
+        
         android:paddingLeft="13dp"
         android:background="@drawable/edt_background"
         android:layout_marginRight="20dp"
@@ -39,6 +41,7 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="150dp"
+        
         android:layout_height="wrap_content"
         android:layout_below="@id/edt_password"
         android:text="log In"
