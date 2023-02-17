@@ -7,6 +7,7 @@
     android:background="@drawable/mainbackground"
     tools:context=".SignUp">
 
+
     <ImageView
         android:id="@+id/applogo"
         android:layout_width="150dp"
