@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class SignUp : AppCompatActivity() {
     // initializing all the views
@@ -17,6 +19,8 @@ class SignUp : AppCompatActivity() {
     private lateinit var btnSignUp: Button
 
     private lateinit var mAuth : FirebaseAuth
+
+    private lateinit var mDbRef : DatabaseReference
 
 
 
@@ -50,11 +54,29 @@ class SignUp : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // code for jumping to home activity
+
+                    // getting current user unique id
+                    val uid=mAuth.currentUser?.uid
+                    // adding user to database
+                    addUserToDatabase(email , name , uid!!) // !! use for null safe
+
                     val intent = Intent(this,MainActivity::class.java)
+
                     startActivity(intent)
+                    finish()
                 } else {
-                    Toast.makeText(this,"Some Error Occurred ",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this,"Email id is already registered ",Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+
+    // method of adding user to database
+    private fun addUserToDatabase(email : String , name : String , uid : String){
+        mDbRef = FirebaseDatabase.getInstance().getReference()
+
+        // child will add the node in data base .
+
+        mDbRef.child("user").child(uid).setValue(User(name ,email,uid))
     }
 }
