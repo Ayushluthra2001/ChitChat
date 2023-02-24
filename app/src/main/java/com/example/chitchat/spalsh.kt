@@ -14,7 +14,7 @@ class spalsh : AppCompatActivity() {
         Handler().postDelayed({
             val intent=Intent(this,Login::class.java)
             startActivity(intent)
-            finish()
+           finish()
         },1500)
 
     }
