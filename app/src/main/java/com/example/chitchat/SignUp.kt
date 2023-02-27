@@ -44,10 +44,10 @@ class SignUp : AppCompatActivity() {
 
             if(name.isEmpty()){
                 Toast.makeText(this,"Name Can't be Empty",Toast.LENGTH_SHORT).show()
-            }else if(password.isEmpty()){
-                Toast.makeText(this,"Password Can't be empty",Toast.LENGTH_SHORT).show()
             }else if(email.isEmpty()){
                 Toast.makeText(this,"Email Can't be Empty",Toast.LENGTH_SHORT).show()
+            }else if(password.isEmpty()) {
+                Toast.makeText(this, "Password Can't be empty", Toast.LENGTH_SHORT).show()
             }else{
                 signUp(name,email,password)
             }
