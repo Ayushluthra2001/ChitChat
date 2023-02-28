@@ -38,6 +38,7 @@
             android:background="@drawable/message_box_background"
             android:layout_weight="85"/>
         <ImageView
+            android:id="@+id/sendButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/send"
