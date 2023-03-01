@@ -87,8 +87,8 @@ class ChatActivity : AppCompatActivity() {
                     .addOnSuccessListener {
                         mDbRef.child("chats").child(receiverRoom!!).child("messages").push().setValue(messageObject)
                     }
-
-//                messageBox.setText("")
+                // clearing the text after pressing the send button
+                messageBox.setText("")
             }
 
 
