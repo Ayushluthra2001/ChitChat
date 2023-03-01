@@ -3,7 +3,7 @@
     <style name="Theme.ChitChat" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
 
-        <item name="colorPrimary">#278DE1</item>
+        <item name="colorPrimary">#3F9FEF</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -11,7 +11,7 @@
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">#0E8CF1</item>
+        <item name="android:statusBarColor" tools:targetApi="l">#064577</item>
         <!-- Customize your theme here. -->
     </style>
 </resources>
