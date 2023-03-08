@@ -55,6 +55,7 @@ class SignUp : AppCompatActivity() {
         }
     }
 
+
     private fun signUp(name: String , email: String, password : String){
 
         // logic of creating the new user .
@@ -62,6 +63,7 @@ class SignUp : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // code for jumping to home activity
+
 
                     // getting current user unique id
                     val uid=mAuth.currentUser?.uid

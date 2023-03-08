@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
@@ -18,6 +19,7 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var messageAdapter: MessageAdapter
     private lateinit var messageList:ArrayList<Message>
     private lateinit var mDbRef : DatabaseReference
+    private lateinit var textView: TextView
 
     var receiverRoom  : String ? =null
     var senderRoom : String?=null
@@ -41,16 +43,17 @@ class ChatActivity : AppCompatActivity() {
         receiverRoom= senderUid + receiverUid
 
         // setting title of the activity
-        supportActionBar?.title = name
+//        supportActionBar?.title = name
+        supportActionBar?.hide()
 
-
+        textView = findViewById(R.id.txtview)
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageBox = findViewById(R.id.messageBox)
         sendButton = findViewById(R.id.sendButton)
         messageList = ArrayList()  // initilize messageList of type array list
         messageAdapter= MessageAdapter(this,messageList)
 
-
+        textView.text=name
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter= messageAdapter
 
