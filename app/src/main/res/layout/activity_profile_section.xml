@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileSection">
+
+    <ImageView
+        android:id="@+id/imgProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_person_24"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="200dp"
+        >
+    </ImageView>
+    <TextView
+        android:id="@+id/txtProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ayush Luthra"
+        android:gravity="center"
+        android:layout_below="@id/imgProfile"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp">
+
+    </TextView>
+    <TextView
+        android:id="@+id/userBio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Hey there! I am using Chit Chat"
+        android:gravity="center"
+        android:layout_below="@id/txtProfileName"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp">
+
+    </TextView>
+
+</RelativeLayout>

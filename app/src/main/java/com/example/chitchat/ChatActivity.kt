@@ -3,6 +3,8 @@ package com.example.chitchat
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
@@ -19,7 +21,7 @@ class ChatActivity : AppCompatActivity() {
     private lateinit var messageAdapter: MessageAdapter
     private lateinit var messageList:ArrayList<Message>
     private lateinit var mDbRef : DatabaseReference
-    private lateinit var textView: TextView
+//    private lateinit var textView: TextView
 
     var receiverRoom  : String ? =null
     var senderRoom : String?=null
@@ -43,17 +45,17 @@ class ChatActivity : AppCompatActivity() {
         receiverRoom= senderUid + receiverUid
 
         // setting title of the activity
-//        supportActionBar?.title = name
-        supportActionBar?.hide()
+        supportActionBar?.title = name
+//        supportActionBar?.hide()
 
-        textView = findViewById(R.id.txtview)
+//        textView = findViewById(R.id.txtview)
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageBox = findViewById(R.id.messageBox)
         sendButton = findViewById(R.id.sendButton)
         messageList = ArrayList()  // initilize messageList of type array list
         messageAdapter= MessageAdapter(this,messageList)
 
-        textView.text=name
+//        textView.text=name
         chatRecyclerView.layoutManager = LinearLayoutManager(this)
         chatRecyclerView.adapter= messageAdapter
 
@@ -97,4 +99,26 @@ class ChatActivity : AppCompatActivity() {
 
         }
     }
+
+    // writing code for goint to profile section
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+
+        menuInflater.inflate(R.menu.profilemenu,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val name = intent.getStringExtra("name")
+        if(item.itemId==R.id.profilesection){
+            // write the code for goint to profile section
+            val intent = Intent(this,ProfileSection::class.java)
+
+            intent.putExtra("name",name)
+            startActivity(intent)
+
+            return true
+        }
+        return true;
+    }
+
 }

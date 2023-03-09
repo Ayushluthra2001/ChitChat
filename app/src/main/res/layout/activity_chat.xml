@@ -8,68 +8,8 @@
     android:layout_height="match_parent"
     tools:context=".ChatActivity">
 
-    <LinearLayout
-        android:id="@+id/linear1"
-        android:background="@drawable/btn_background"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="100"
-        android:layout_alignParentTop="true">
-        <View
-            android:id="@+id/view3"
-
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
 
 
-            android:background="@color/black"
-            >
-
-        </View>
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_gravity="center"
-            android:layout_height="50dp"
-            android:layout_weight="20"
-
-            android:src="@drawable/temp"/>
-        <View
-            android:id="@+id/view2"
-
-            android:layout_width="2dp"
-            android:layout_height="match_parent"
-
-            android:background="@color/black"
-            >
-
-        </View>
-        <TextView
-            android:id="@+id/txtview"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textStyle="bold"
-
-            android:layout_marginTop="2dp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="80"
-            android:text="My Name "
-            android:textSize="30sp">
-
-        </TextView>
-
-    </LinearLayout>
-    <View
-        android:id="@+id/view"
-        android:layout_below="@+id/linear1"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-
-        android:background="@color/black"
-        >
-
-    </View>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRecyclerView"
@@ -78,10 +18,10 @@
 
         android:layout_height="wrap_content"
         android:layout_above="@+id/LinearLayout"
-        android:layout_below="@+id/view"
 
 
 
+        android:layout_alignParentTop="true"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp" />
 
