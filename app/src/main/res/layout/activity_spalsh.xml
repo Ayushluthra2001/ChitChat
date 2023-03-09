@@ -7,14 +7,18 @@
     android:background="@drawable/background"
     tools:context=".spalsh">
 
-    <ImageView
-
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewSpalsh"
         android:layout_width="190dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="120dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
         android:layout_centerHorizontal="true"
-        app:srcCompat="@drawable/chitchatlogo" />
+        android:src="@drawable/chitchatlogo"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+
 
     <TextView
         android:id="@+id/text_Viewsplashscreen"

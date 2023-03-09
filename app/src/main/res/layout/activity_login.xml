@@ -8,14 +8,16 @@
     android:background="@drawable/background"
     tools:context=".Login">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/applogo"
-        android:layout_width="150dp"
+        android:layout_width="190dp"
         android:layout_height="150dp"
-        android:src="@drawable/chitchatlogo"
+        android:layout_gravity="center"
+        android:layout_marginTop="70dp"
         android:layout_centerHorizontal="true"
-
-        android:layout_marginTop="70dp"/>
+        android:src="@drawable/chitchatlogo"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
     <EditText
         android:id="@+id/edt_email"
         android:layout_width="match_parent"
