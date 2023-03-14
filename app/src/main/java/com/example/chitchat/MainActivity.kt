@@ -79,7 +79,15 @@ class MainActivity : AppCompatActivity() {
             val intent =Intent(this,Login::class.java)
             startActivity(intent)
             finish()
-            return true;
+            return true
+        }else if(item.itemId==R.id.YourProfile){
+
+            val currentUser = mAuth.currentUser?.displayName
+            val intent = Intent(this,CurrentUserActivity::class.java)
+            intent.putExtra("name",currentUser)
+            startActivity(intent)
+            return true
+
         }
        return true;
     }

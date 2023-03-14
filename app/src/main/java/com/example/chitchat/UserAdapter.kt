@@ -11,8 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 
 class UserAdapter(val context : Context,val userList :ArrayList<User>) : RecyclerView.Adapter<UserAdapter.userViewHolder>() {
     class userViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val textName= itemView.
-        findViewById<TextView>(R.id.txt_name)
+        val textName= itemView.findViewById<TextView>(R.id.txt_name)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): userViewHolder {
