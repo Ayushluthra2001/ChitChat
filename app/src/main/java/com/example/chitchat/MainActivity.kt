@@ -76,7 +76,7 @@ class MainActivity : AppCompatActivity() {
         if(item.itemId==R.id.logout){
             // write the code of logout
             mAuth.signOut()
-            val intent =Intent(this,Login::class.java)
+            val intent =Intent(this,Loginj::class.java)
             startActivity(intent)
             finish()
             return true

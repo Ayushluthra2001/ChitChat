@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".SignUp">
+    tools:context=".Registerj">
 
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -62,6 +62,20 @@
         android:layout_below="@id/edt_password"
         android:text="Sign Up"
         android:textSize="20sp"
+        android:background="@drawable/btn_background"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/btn_Login"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edt_password"
+        android:text="Login"
+        android:textSize="20sp"
+        android:layout_margin="75sp"
         android:background="@drawable/btn_background"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
